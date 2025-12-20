@@ -15,3 +15,10 @@ class TeacherLoginSerializer(serializers.Serializer):
         if not user or user.role != 'teacher':
             raise serializers.ValidationError("Invalid credentials")
         return user
+    
+#Teacher Profile
+class TeacherProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['id', 'username', 'first_name', 'last_name', 'role']
+
