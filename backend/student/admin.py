@@ -1,10 +1,8 @@
 from django.contrib import admin
-
-# Register your models here.
-
 from django.contrib import admin
-from .models import Student, Question, ExamResult
+from .models import Student, Question, ExamResult, LearningContent
 
 admin.site.register(Student)
 admin.site.register(Question)
 admin.site.register(ExamResult)
+admin.site.register(LearningContent)

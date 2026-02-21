@@ -35,11 +35,3 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return f"{self.username} ({self.role})"
-
-
-class Student(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    student_id = models.CharField(max_length=20, unique=True)
-
-    def __str__(self):
-        return self.student_id
