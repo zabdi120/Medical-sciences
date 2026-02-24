@@ -22,7 +22,7 @@ class QuestionSerializer(serializers.ModelSerializer):
 class LearningContentSerializer(serializers.ModelSerializer):
     class Meta:
         model = LearningContent
-        fields = ['id', 'title', 'body', 'created_at', 'updated_at']
+        fields = ['id', 'title', 'body', 'file', 'created_at', 'updated_at']
 
 class QuestionWriteSerializer(serializers.ModelSerializer):
     class Meta:
